@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grade Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 50px auto;
+      text-align: center;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 80%;
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Grade Calculator</h2>
+  <input type="number" id="scoreInput" placeholder="Enter your score (0–100)">
+  <br>
+  <button onclick="calculateGrade()">Get Grade</button>
+
+  <div id="result"></div>
+
+  <script>
+    function getGrade(score) {
+      if (score >= 90) return "A";
+      else if (score >= 80) return "B";
+      else if (score >= 70) return "C";
+      else if (score >= 60) return "D";
+      else return "F";
+    }
+
+    function calculateGrade() {
+      const score = parseFloat(document.getElementById("scoreInput").value);
+      const resultDiv = document.getElementById("result");
+
+      if (isNaN(score) || score < 0 || score > 100) {
+        resultDiv.textContent = "Please enter a valid score between 0 and 100.";
+        resultDiv.style.color = "red";
+      } else {
+        const grade = getGrade(score);
+        resultDiv.textContent = `Your grade is: ${grade}`;
+        resultDiv.style.color = "green";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+
