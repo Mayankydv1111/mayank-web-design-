@@ -3,72 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .contact-form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-        .contact-form h2 {
-            margin-top: 0;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <title>FAQ Page</title>
 </head>
 <body>
-    <div class="contact-form">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-            <input type="text" id="name" name="name" placeholder="Your name" required>
-            <input type="email" id="email" name="email" placeholder="Your email" required>
-            <textarea id="message" name="message" placeholder="Your message" rows="4" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+    <header>
+        <h1>Frequently Asked Questions</h1>
+    </header>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+    <main>
+        <section>
+            <h2>General Questions</h2>
+            <details>
+                <summary>What is this website about?</summary>
+                <p>This website is a collection of frequently asked questions about our services.</p>
+            </details>
 
-            if (name && email && message) {
-                alert('Thank you for your message, ' + name + '!');
-                // Here you can add code to send the form data to your server
-            } else {
-                alert('Please fill in all fields.');
-            }
-        });
-    </script>
+            <details>
+                <summary>How can I contact support?</summary>
+                <p>You can reach our support team via email at support@example.com.</p>
+            </details>
+        </section>
+
+        <section>
+            <h2>Account & Billing</h2>
+            <details>
+                <summary>How do I reset my password?</summary>
+                <p>Click on the "Forgot Password" link on the login page and follow the instructions.</p>
+            </details>
+
+            <details>
+                <summary>What payment methods do you accept?</summary>
+                <p>We accept credit cards, PayPal, and bank transfers.</p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Website Name</p>
+    </footer>
 </body>
 </html>
