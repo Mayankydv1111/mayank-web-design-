@@ -1,3 +1,26 @@
 td{
     border: 2px solid black;
+    color: rgb(228, 94, 21);
+
+}
+h1{
+    color: brown;
+}
+h2{
+    color: chartreuse;
+}
+h3{
+    color: darkblue;
+}
+dt{
+    color: darkmagenta;
+}
+ol{
+    color: rgb(139, 34, 55);
+}
+ul{
+    color:purple;
+}
+dd{
+    color: aqua;
 }
